@@ -1,11 +1,11 @@
 <template>
    
-    <img :src="require('@/assets/profilbild_enrico_carruba2.png')" alt="Enrico Carruba">
-    <h1>Hello, my name is 
-        <br>
-        <span> Enrico Carruba</span>
-            
-    </h1>
+    <img 
+    class="profile-image" 
+    :src="require('@/assets/profilbild_enrico_carruba2.png')" 
+    alt="Enrico Carruba">
+   
+    <h1>Hello, my name is <br> <span> Enrico Carruba</span></h1>
     <p>I am a passionate junior <span> Web and Software Developer.</span></p>
     <p class="welcome-text">Welcome to my digital CV and portfolio page! Feel free to contact me.</p>
 </template>
@@ -34,7 +34,7 @@ h2{
     text-align: center;
 }
 
-img {
+.profile-image {
     width: 80%;
     border-radius: 50%;
 }

@@ -1,14 +1,16 @@
 <template>
   <main-header/>
+  <current-stack/>
 </template>
 
 <script>
 import MainHeader from "./components/MainHeader.vue";
+import currentStack from "./components/currentStack.vue";
 
 export default {
   name: 'App',
   components: {
-    MainHeader,
+    MainHeader, currentStack,
   }
 }
 </script>
