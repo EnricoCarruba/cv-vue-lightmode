@@ -6,8 +6,10 @@
         <span> Enrico Carruba</span>
             
     </h1>
-    <p>I am a passionate junior <span> Web and Software Developer.</span></p>
+    <div class="header-text">
+    <p>Web and Software Developer</p>
     <p class="welcome-text">Welcome to my digital CV and portfolio page! Feel free to contact me.</p>
+    </div>
 </template>
 <script>
 export default {
@@ -40,18 +42,18 @@ img {
 }
 
 p {
-    
-    font-weight: 400;
+    font-weight: 600;
     margin: 1.5rem;
 }
 
-p span {
-    display: block;
-    font-weight: bolder;
+.welcome-text{
+    
+    font-weight: 400;
 }
 
-.welcome-text{
-    text-align: justify-all;
+.header-text{
+    margin: 1rem;
+    text-align: center;
 }
 
 </style>
