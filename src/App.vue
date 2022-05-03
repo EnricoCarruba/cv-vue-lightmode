@@ -1,16 +1,18 @@
 <template>
   <main-header/>
   <current-stack/>
+  <toggle-buttons/>
 </template>
 
 <script>
 import MainHeader from "./components/MainHeader.vue";
 import currentStack from "./components/currentStack.vue";
+import toggleButtons from "./components/toggleButtons.vue";
 
 export default {
   name: 'App',
   components: {
-    MainHeader, currentStack,
+    MainHeader, currentStack, toggleButtons,
   }
 }
 </script>
