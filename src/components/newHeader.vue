@@ -1,9 +1,7 @@
 <template>
     <div class="navigation">
         <h1 class="navigation-header">PORTFOLIO</h1>
-        <hamburger-menu class="hamburger-menu" @some-event="callback"/>
-
-        
+        <hamburger-menu class="hamburger-menu" @some-event="callback"/>   
     </div>
     
 
@@ -24,15 +22,16 @@ import hamburgerMenu from "./hamburgerMenu.vue";
 export default {
     components: {
         hamburgerMenu,
+    },
+    methods: {
+        callback(){
+            console.log("emit funktioniert");
+        }
     }
 }
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
-html {
-    font-family: 'Sora';  
-    margin: 1rem; 
-}
 
 .navigation{
     color: darkslategray;
@@ -40,26 +39,27 @@ html {
     text-align: left;
     display: flex;
     justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+   
 }
 
 .hamburger-menu{
     display: flex;
     align-items: center;
-    
+    margin-right: 1rem;
 }
 
-
-
-h1{
-    font-weight: 300;
+.navigation-header{
+    margin-left: 1rem;
 }
 
 h1 span{
     font-weight: 600;
 }
 
-h2{
-    
+h2{ 
     text-align: center;
 }
 

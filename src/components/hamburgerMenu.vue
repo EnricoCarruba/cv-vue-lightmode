@@ -1,5 +1,5 @@
 <template>
-    <div class="hamburger-container" @click="toggle(); $emit("someEvent")">
+    <div class="hamburger-container" @click="toggle(); $emit('someEvent')">
         <div class="hamburg">
             <span class="line"></span>
             <span class="line"></span>
