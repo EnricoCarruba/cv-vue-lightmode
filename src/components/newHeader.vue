@@ -3,18 +3,21 @@
         <h1 class="navigation-header">PORTFOLIO</h1>
         <hamburger-menu class="hamburger-menu" @some-event="callback"/>   
     </div>
-    
-
-
-
-    <img 
-    class="profile-image" 
-    :src="require('@/assets/profilbild_enrico_carruba2.png')" 
-    alt="Enrico Carruba">
+    <div class="header-text-container">
+        <div class="header-text">
+            <h1>Hello,</h1>
+            <p>my name is Enrico Carruba.</p>
+            <p>I am a passionate junior <br> <span> Web and Software Developer </span> <br> from Hannover.</p>
+            <p class="welcome-text">Welcome to my digital CV and Portfolio page! Feel free to contact me.</p>
+        </div>
+        
+    </div>
+    <div class="profile-image-container" >
+                <img id="profile-image"
+                :src="require('@/assets/profilbild_enrico_carruba.png')" 
+                alt="Enrico Carruba"/>
+    </div>
    
-    <h1>Hello, my name is <br> <span> Enrico Carruba</span></h1>
-    <p>I am a passionate junior <span> Web and Software Developer.</span></p>
-    <p class="welcome-text">Welcome to my digital CV and portfolio page! Feel free to contact me.</p>
 </template>
 <script>
 import hamburgerMenu from "./hamburgerMenu.vue";
@@ -41,8 +44,10 @@ export default {
     justify-content: space-between;
     background-color: white;
     position: fixed;
+    display: inline-flexbox;
+    top: 0;
     width: 100%;
-   
+    box-shadow: 10px 0 25px lightgrey;
 }
 
 .hamburger-menu{
@@ -55,33 +60,48 @@ export default {
     margin-left: 1rem;
 }
 
-h1 span{
-    font-weight: 600;
+#hello {
+    color: salmon;
 }
 
-h2{ 
-    text-align: center;
+#my-name-is {
+    font-weight: 300;
+    color: black;
 }
 
-.profile-image {
-    width: 80%;
-    border-radius: 50%;
+.header-text-container{
+    width: 90vw;
+    height: 45vh;
+    margin: 6.5rem 1rem 0rem 1rem;
+    box-shadow: 0px 0px 25px lightgrey;
 }
 
-p {
-    
-    font-weight: 400;
-    margin: 1.5rem;
+.header-text-container h1{
+    color: salmon;
 }
 
-p span {
-    display: block;
+.header-text {
+    margin: 1rem; 
+    padding-top: 0.05rem;
+}
+
+.header-text span {
     font-weight: bolder;
 }
 
-.welcome-text{
-    text-align: justify-all;
+.profile-image-container{
+    width: 90vw;   
+    height: 50vh;
+    margin: 0 1rem 0 1rem;
 }
+
+#profile-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 </style>
 
