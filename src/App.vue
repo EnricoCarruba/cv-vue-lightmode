@@ -1,32 +1,29 @@
 <template>
-  <main-header/>
+  <new-header/>
   <current-stack/>
   <toggle-buttons/>
 </template>
 
 <script>
-import MainHeader from "./components/MainHeader.vue";
+import newHeader from "./components/newHeader.vue";
 import currentStack from "./components/currentStack.vue";
 import toggleButtons from "./components/toggleButtons.vue";
 
 export default {
   name: 'App',
   components: {
-    MainHeader, currentStack, toggleButtons,
+    newHeader, currentStack, toggleButtons,
   }
 }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
-
-#app {
-  
+html, body {
+  box-sizing: border-box;
   font-family: 'Sora';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 30px;
+  margin: 0;
+  padding: 0;
 }
+
 </style>
