@@ -1,8 +1,14 @@
 <template>
     <div class="navigation">
         <h1 class="navigation-header">PORTFOLIO</h1>
-        <hamburger-menu class="hamburger-menu" @some-event="callback"/>   
+        <hamburger-menu class="hamburger-menu" @click-event="toggleNavigationList()"/>   
+            <div class="navigation-list" v-show="isToggledHeaderNavigation">
+            <button @click="download()">Download CV</button>
+            </div>
     </div>
+
+    
+
     <div class="header-text-container">
         <div class="header-text">
             <h1>Hello,</h1>
@@ -23,14 +29,23 @@
 import hamburgerMenu from "./hamburgerMenu.vue";
 
 export default {
+    data() {
+        return {
+            isToggledHeaderNavigation: false,
+        }
+    },
     components: {
         hamburgerMenu,
     },
     methods: {
-        callback(){
-            console.log("emit funktioniert");
+        toggleNavigationList(){
+            this.isToggledHeaderNavigation = !this.isToggledHeaderNavigation;
+        },
+        download(){
+            window.open("URL");
         }
-    }
+    },
+
 }
 </script>
 <style>
@@ -60,13 +75,14 @@ export default {
     margin-left: 1rem;
 }
 
-#hello {
-    color: salmon;
+.navigation-list{
+    background-color: lightgrey;
+    position: fixed;
+    
 }
 
-#my-name-is {
-    font-weight: 300;
-    color: black;
+.navigation-list-items{
+    list-style-type: none;
 }
 
 .header-text-container{
