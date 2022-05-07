@@ -1,18 +1,18 @@
 <template>
   <new-header/>
   <current-stack/>
-  <toggle-buttons/>
+  <my-portfolio/>
 </template>
 
 <script>
 import newHeader from "./components/newHeader.vue";
 import currentStack from "./components/currentStack.vue";
-import toggleButtons from "./components/toggleButtons.vue";
+import myPortfolio from "./components/myPortfolio.vue";
 
 export default {
   name: 'App',
   components: {
-    newHeader, currentStack, toggleButtons,
+    newHeader, currentStack, myPortfolio,
   }
 }
 </script>
