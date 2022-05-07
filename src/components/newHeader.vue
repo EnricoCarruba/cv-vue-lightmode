@@ -3,11 +3,21 @@
         <h1 class="navigation-header">PORTFOLIO</h1>
         <hamburger-menu class="hamburger-menu" @click-event="toggleNavigationList()"/>   
             <div class="navigation-list" v-show="isToggledHeaderNavigation">
-            <button @click="download()">Download CV</button>
+                <ul>
+                    <li>
+                        <img id="download-img" :src="require('@/assets/download.svg')" alt="">
+                        <a @click="download()">Download CV</a>
+                    </li>
+                    <li>
+                        <img class="navigation-logos" :src="require('@/assets/GitHub_Logo.png')" alt="">
+                        <a href="https://github.com/EnricoCarruba">My Github profile</a>
+                    </li>
+                    <li>
+                        <a @click="download()">Contact me</a>
+                    </li>
+                </ul>
             </div>
     </div>
-
-    
 
     <div class="header-text-container">
         <div class="header-text">
@@ -42,7 +52,7 @@ export default {
             this.isToggledHeaderNavigation = !this.isToggledHeaderNavigation;
         },
         download(){
-            window.open("URL");
+            window.open("https://github.com/EnricoCarruba/cv-vue-lightmode/raw/main/src/assets/CV%20Enrico%20Carruba%20.pdf");
         }
     },
 
@@ -73,16 +83,32 @@ export default {
 
 .navigation-header{
     margin-left: 1rem;
+    
 }
 
 .navigation-list{
     background-color: lightgrey;
-    position: fixed;
-    
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+}
+
+.navigation-logos{
+    height: 10vh;
+    width: 10vw;
+}
+
+li {
+    list-style: none;
 }
 
 .navigation-list-items{
     list-style-type: none;
+}
+
+.download-img {
+    height: 150px;
+    width: 150px;
 }
 
 .header-text-container{
