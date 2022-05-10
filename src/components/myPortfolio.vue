@@ -4,20 +4,35 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam iusto saepe, ab blanditiis voluptatibus corporis vel voluptas! Alias iste doloremque aliquam placeat nemo modi? Ipsum sapiente mollitia neque omnis?</p>
         <button @click="showProjects = !showProjects; toggleBtnText()"> {{ btnText }}</button>
             <transition>
-            <div class="first-section" v-show="showProjects">
-                <section>
-                   <p v-if="reposLoaded"> {{ this.repos[0] }} </p>
+            <div class="projects" v-show="showProjects">
+                <section v-if="reposLoaded">
+                   <h1>NAME</h1>
+                   <h2>{{ this.repos[this.counter].name }} </h2>
+                   <h1>DESCRIPTION</h1>
+                   <p>{{ this.repos[this.counter].description }}</p>
+                   <a :href="this.repos[this.counter].html_url">LINK to Github Repository</a>
+                   <div class="repo-buttons">
+                    <button @click="btnPrevious()">previous</button>
+                    <button @click="btnNext()">next</button>
+                   </div>
                 </section>
             </div>
              
             </transition>
+
+          
            
 
     </div>
 </template>
 
 <script>
+
 export default {
+    components: {
+       
+    },
+
     created() {
          fetch('https://api.github.com/users/enricocarruba/repos')
         .then(resp => resp.json())
@@ -27,9 +42,10 @@ export default {
     
     data() {
         return {
-            showProjects: false,
-            btnText: "Show details",
+            showProjects: true,
+            btnText: "More details",
             repos: [],
+            counter: 0,
         }
     },
     methods: {
@@ -39,7 +55,25 @@ export default {
             } else {
                 this.btnText = "More details";
             }
-        }
+        },
+        btnNext(){
+            if(this.counter < this.repos.length){
+                this.counter++; 
+                }
+            console.log(this.counter);
+            console.log(this.repos.length);
+        },
+        btnPrevious(){
+            if(this.counter >= 0){
+            this.counter--; {
+                if(this.counter == -1){
+                    this.counter = 0;
+                }
+            }
+            }
+            console.log(this.counter);
+            console.log(this.repos.length);
+        },
     },
     computed: {
         reposLoaded(){
@@ -80,5 +114,42 @@ button {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+.projects{
+    width: 100%;
+}
+
+.projects h1 {
+    color: lightgray;
+    font-size: 1rem;
+    margin: 1rem 0 0 1rem; 
+}
+
+.projects h2 {
+    margin: 0 0 1rem 1rem;
+}
+
+.projects a {
+    margin: 1rem;
+}
+
+.projects p {
+    margin: 0 0 1rem 1rem;
+}
+
+.repo-buttons {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.repo-buttons button {
+    width: 100px;
+    height: 30px; 
+    background-color: lightgrey;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
 }
 </style>
