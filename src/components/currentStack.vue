@@ -1,6 +1,6 @@
 <template>
     <div class="stack-component-container">
-        <h3>Current stack</h3>
+        <h3>My stack</h3>
         <div class="stack-images-container">
             <img class="stack-images" :src="require('@/assets/HTML5.png')" alt="">
             <img class="stack-images" :src="require('@/assets/css.png')" alt="">
