@@ -42,7 +42,7 @@ export default {
     
     data() {
         return {
-            showProjects: true,
+            showProjects: false,
             btnText: "More details",
             repos: [],
             counter: 0,
