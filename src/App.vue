@@ -2,17 +2,20 @@
   <new-header/>
   <current-stack/>
   <my-portfolio/>
+  <my-cv/>
 </template>
 
 <script>
 import newHeader from "./components/newHeader.vue";
 import currentStack from "./components/currentStack.vue";
 import myPortfolio from "./components/myPortfolio.vue";
+import myCv from "./components/myCv.vue";
+
 
 export default {
   name: 'App',
   components: {
-    newHeader, currentStack, myPortfolio,
+    newHeader, currentStack, myPortfolio, myCv,
   }
 }
 </script>
