@@ -1,7 +1,7 @@
 <template>
     <div class="navigation">
-        <h1 class="navigation-header">PORTFOLIO</h1>
-        <hamburger-menu class="hamburger-menu" @click-event="toggleNavigationList()"/>   
+        <h1 class="navigation-header">PORTFOLIO & CV</h1>
+       <!--  <hamburger-menu class="hamburger-menu" @click-event="toggleNavigationList()"/>   
             <div class="navigation-list" v-show="isToggledHeaderNavigation">
                 <ul>
                     <li>
@@ -16,7 +16,7 @@
                         <a @click="download()">Contact me</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
     </div>
 
     <div class="header-text-container">
@@ -36,7 +36,7 @@
    
 </template>
 <script>
-import hamburgerMenu from "./hamburgerMenu.vue";
+// import hamburgerMenu from "./hamburgerMenu.vue";
 
 export default {
     data() {
@@ -45,7 +45,7 @@ export default {
         }
     },
     components: {
-        hamburgerMenu,
+        // hamburgerMenu,
     },
     methods: {
         toggleNavigationList(){
@@ -120,10 +120,11 @@ li {
 
 .header-text-container h1{
     color: salmon;
+    margin-left: 1rem;
 }
 
 .header-text {
-    margin: 1rem; 
+    margin: 0;
     padding-top: 0.05rem;
 }
 
