@@ -9,8 +9,8 @@
         { 
                 "id": 1,
                 "year": "2022 - now", 
-                "position": "Web Developement projects like this CV and more. ", 
-                "company": "Me myself and I"
+                "position": "Web developement projects like this CV and more. ", 
+                "company": "Just me"
         },
         { 
                 "id": 2,
@@ -28,7 +28,7 @@
     },   
     { "id": 2, 
       "title": "Barbershop Owner", 
-      "content": "After 13 years of Sales and Business Developement I decided to learn a traditional handcraft. Through my wife which is a master in hairdressing and through several workshops I learned a lot of barbering technics. One year later after month of hard learning and hundreds of no payed haircuts I opened Hannovers first traditional Barbershop which is stil the most wanted in town. Finally my passion lead me to the semifinals of the International Barber Awards.", 
+      "content": "After 13 years of Sales and Business Developement I decided to learn a traditional handcraft. Through my wife which is a master in hairdressing and through several workshops I learned a lot of barbering technics. One year later after month of hard learning and hundreds of no payed haircuts I opened Hannovers first traditional Barbershop which is still the most wanted in town. Finally my passion lead me to the semifinals of the International Barber Awards.", 
       "img": "barber.jpg",
       "year": "since 2014",
       "experiences": [
@@ -42,7 +42,7 @@
                 "id": 2,    
                 "year": "2014 - 2015",
                 "position": "Barber and Hairstyling Student",
-                "company": "THE BARBERSHOP Hannover"
+                "company": "JULIA RAUTH Hair and Make-up"
         }
         ]
     },
