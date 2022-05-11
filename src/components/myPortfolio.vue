@@ -13,7 +13,7 @@
                    <a :href="this.repos[this.counter].html_url">LINK to Github Repository</a>
                    <div class="repo-buttons">
                     <button id="btnPrevious" @click="btnPrevious()">previous</button>
-                    <span> {{ this.counter}} / {{ this.repos.length }}</span>
+                    <span> {{ this.counter +1 }} / {{ this.repos.length  }}</span>
                     <button id="btnNext" @click="btnNext()">next</button>
                    </div>
                 </section>
