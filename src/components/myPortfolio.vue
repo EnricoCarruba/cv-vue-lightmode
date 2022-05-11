@@ -136,7 +136,7 @@ button {
     margin: 0 0 1rem 1rem;
 }
 
-.repo-buttons {
+/* .repo-buttons {
     
     display: flex;
     justify-content: center;
@@ -149,5 +149,5 @@ button {
     border: none;
     border-radius: 5px;
     font-weight: bolder;
-}
+} */
 </style>
