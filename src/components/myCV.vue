@@ -8,18 +8,26 @@
                 <div class="sections" v-show="showSections">
                     <section id="section1">
                         <article>
-                            <h3>{{  experiences[0].title    }}</h3>
-                            <p> {{  experiences[0].content  }} </p>
+                            <h3>{{      experiences[0].title    }}</h3>
+                            <span> {{   experiences[0].year   }}</span>
+                            <p> {{      experiences[0].content  }} </p>
                             <button id="btn-article1" @click="expandArticle1 = !expandSection1, toggleBtnText($event)">More details</button>
+                                <div class="table-container" v-show="expandArticle1" v-for="experience in experiences[0].experiences" :key="experience.id">
+                                        <h3 >{{ experience.year }}</h3> 
+                                        <p> {{  experience.position }}</p>   
+                                        <p> {{  experience.company }}</p>
+                                </div>
                         </article>
                         <article>
-                            <h3>{{  experiences[1].title    }}</h3>
-                            <p> {{  experiences[1].content  }} </p>
+                            <h3>{{      experiences[1].title    }}</h3>
+                            <span> {{   experiences[1].year   }}</span>
+                            <p> {{      experiences[1].content  }} </p>
                             <button id="btn-article2" @click="expandArticle2 = !expandSection1, toggleBtnText($event)">More details</button>
                         </article>
                         <article>
-                            <h3>{{  experiences[2].title    }}</h3>
-                            <p> {{  experiences[2].content  }} </p>
+                            <h3>{{      experiences[2].title    }}</h3>
+                            <span> {{   experiences[2].year   }}</span>
+                            <p> {{      experiences[2].content  }} </p>
                             <button id="btn-article3" @click="expandArticle3 = !expandSection1, toggleBtnText($event)">More details</button>
                         </article>
                         
