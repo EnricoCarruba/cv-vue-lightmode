@@ -1,7 +1,7 @@
 <template>
     <div class="portfolio-component-container">
         <h3>My portfolio</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam iusto saepe, ab blanditiis voluptatibus corporis vel voluptas! Alias iste doloremque aliquam placeat nemo modi? Ipsum sapiente mollitia neque omnis?</p>
+        <p>Here you can see my past public projects which I pushed to my Github account. Most of them are front-end projects and one is about Java. </p>
         <button @click="showProjects = !showProjects; toggleBtnText()"> {{ btnText }}</button>
             <transition>
             <div class="projects" v-show="showProjects">
