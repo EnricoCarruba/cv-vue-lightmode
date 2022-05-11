@@ -2,7 +2,7 @@
   <new-header/>
   <current-stack/>
   <my-portfolio/>
-  <my-cv/>
+  <cv-data/>
   <my-education/>
 </template>
 
@@ -10,15 +10,19 @@
 import newHeader from "./components/newHeader.vue";
 import currentStack from "./components/currentStack.vue";
 import myPortfolio from "./components/myPortfolio.vue";
-import myCv from "./components/myCv.vue";
 import myEducation from "./components/myEducation.vue"
+import CvData from "./components/cvData.vue";
 
 
 export default {
   name: 'App',
   components: {
-    newHeader, currentStack, myPortfolio, myCv, myEducation,
-  }
+    newHeader,
+    currentStack,
+    myPortfolio,
+    myEducation,
+    CvData
+}
 }
 </script>
 
