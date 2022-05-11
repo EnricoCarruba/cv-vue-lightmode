@@ -2,8 +2,7 @@
     <div class="my-cv-container">
         <h3>My CV</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam iusto saepe, ab blanditiis voluptatibus corporis vel voluptas! Alias iste doloremque aliquam placeat nemo modi? Ipsum sapiente mollitia neque omnis?</p>
-        <button 
-        id="btn-container" @click="showSections = !showSections, toggleBtnText($event)">More details</button>
+        <button id="btn-container" @click="showSections = !showSections, toggleBtnText($event)">More details</button>
         <transition>
                 <div class="sections" v-show="showSections">
                     <section id="section1">
