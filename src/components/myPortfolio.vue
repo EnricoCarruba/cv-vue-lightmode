@@ -12,8 +12,8 @@
                    <p>{{ this.repos[this.counter].description }}</p>
                    <a :href="this.repos[this.counter].html_url">LINK to Github Repository</a>
                    <div class="repo-buttons">
-                    <button @click="btnPrevious()">previous</button>
-                    <button @click="btnNext()">next</button>
+                    <button id="btnPrevious" @click="btnPrevious()">previous</button>
+                    <button id="btnNext" @click="btnNext()">next</button>
                    </div>
                 </section>
             </div>
@@ -58,21 +58,19 @@ export default {
         },
         btnNext(){
             if(this.counter < this.repos.length){
-                this.counter++; 
-                }
-            console.log(this.counter);
-            console.log(this.repos.length);
+                this.counter++;
+                if(this.counter == this.repos.length ){
+                    this.counter = 0;
+                } 
+            }  
         },
         btnPrevious(){
-            if(this.counter >= 0){
-            this.counter--; {
-                if(this.counter == -1){
-                    this.counter = 0;
-                }
+            if(this.counter != 0){
+                this.counter--;
             }
+            if(this.counter == 0){
+                this.counter = this.repos.length - 1;
             }
-            console.log(this.counter);
-            console.log(this.repos.length);
         },
     },
     computed: {
