@@ -1,7 +1,7 @@
 <template>
     <div class="my-edu-container">
         <h3>My Education</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam iusto saepe, ab blanditiis voluptatibus corporis vel voluptas! Alias iste doloremque aliquam placeat nemo modi? Ipsum sapiente mollitia neque omnis?</p>
+        <p>Here you can find my past vocational education and my university degree.</p>
         <button id="btn-container" @click="showDetails = !showDetails, toggleBtnText($event)">More details</button>
             <transition>
                 <article v-show="showDetails">
@@ -12,7 +12,7 @@
                     </div>
                     <div class="table-container">
                         <p>2011 - 2017</p> 
-                        <p id="position"> Economics & Business Psychology</p>   
+                        <p id="position"> B.A. Economics & Business Psychology</p>   
                         <p>University of Applied Sciences Euro-FH Hamburg</p>
                     </div>
                     <div class="table-container">
