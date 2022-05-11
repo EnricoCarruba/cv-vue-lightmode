@@ -2,21 +2,28 @@
     <div class="my-cv-container">
         <h3>My CV</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam iusto saepe, ab blanditiis voluptatibus corporis vel voluptas! Alias iste doloremque aliquam placeat nemo modi? Ipsum sapiente mollitia neque omnis?</p>
-        <button @click="showSections = !showSections; toggleBtnText()"> {{ btnText }}</button>
+        <button 
+        id="btn-container" @click="showSections = !showSections, toggleBtnText($event)">More details</button>
         <transition>
                 <div class="sections" v-show="showSections">
-                    <section>
-                        <h3>{{  experiences[0].title    }}</h3>
-                        <p> {{  experiences[0].content  }} </p>
-                        <button @click="expandSection1 = !expandSection1; toggleBtnText(button)"> {{ btnText }}</button>
+                    <section id="section1">
+                        <article>
+                            <h3>{{  experiences[0].title    }}</h3>
+                            <p> {{  experiences[0].content  }} </p>
+                            <button id="btn-article1" @click="expandArticle1 = !expandSection1, toggleBtnText($event)">More details</button>
+                        </article>
+                        <article>
+                            <h3>{{  experiences[1].title    }}</h3>
+                            <p> {{  experiences[1].content  }} </p>
+                            <button id="btn-article2" @click="expandArticle2 = !expandSection1, toggleBtnText($event)">More details</button>
+                        </article>
+                        <article>
+                            <h3>{{  experiences[2].title    }}</h3>
+                            <p> {{  experiences[2].content  }} </p>
+                            <button id="btn-article3" @click="expandArticle3 = !expandSection1, toggleBtnText($event)">More details</button>
+                        </article>
                         
-                        
-                        <!-- <div v-for="experience in experiences" :key="experience.id"> 
-                            <h3>{{experience.title}}</h3>  
-                            <p>{{experience.content}}</p> 
-                            <button @click="showSections = !showSections; toggleBtnText()"> {{ btnText }}</button>
-                        </div> -->
-
+            
                     </section>
                 </div>
         </transition>
@@ -34,19 +41,21 @@ export default {
     data() {
         return {
             showSections: false,
-            expandSection1: false,
-
+            expandArticle1: false,
+            expandArticle2: false,
+            expandArticle3: false,
             btnText: "More details",
             
             experiences: experiences,
         }
     },
     methods: {
-        toggleBtnText(button){
-            if(button.value == "More details"){
-                this.btnText = "Less details";
+        toggleBtnText(event){
+            let button = document.getElementById(event.target.id);   
+            if(button.innerHTML == "More details"){
+                button.innerHTML = "Less details";
             } else {
-                this.btnText = "More details";
+                button.innerHTML = "More details";
             }
         },
     }
