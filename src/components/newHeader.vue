@@ -1,22 +1,6 @@
 <template>
     <div class="navigation">
-        <h1 class="navigation-header">PORTFOLIO & CV</h1>
-       <!--  <hamburger-menu class="hamburger-menu" @click-event="toggleNavigationList()"/>   
-            <div class="navigation-list" v-show="isToggledHeaderNavigation">
-                <ul>
-                    <li>
-                        <img id="download-img" :src="require('@/assets/download.svg')" alt="">
-                        <a @click="download()">Download CV</a>
-                    </li>
-                    <li>
-                        <img class="navigation-logos" :src="require('@/assets/GitHub_Logo.png')" alt="">
-                        <a href="https://github.com/EnricoCarruba">My Github profile</a>
-                    </li>
-                    <li>
-                        <a @click="download()">Contact me</a>
-                    </li>
-                </ul>
-            </div> -->
+        <h1 class="navigation-header">PORTFOLIO & CV</h1>        
     </div>
 
     <div class="header-text-container">
@@ -36,7 +20,6 @@
    
 </template>
 <script>
-// import hamburgerMenu from "./hamburgerMenu.vue";
 
 export default {
     data() {
@@ -66,7 +49,7 @@ export default {
     font-size: 1rem;
     text-align: left;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: white;
     position: fixed;
     display: inline-flexbox;
@@ -75,15 +58,8 @@ export default {
     box-shadow: 10px 0 25px lightgrey;
 }
 
-.hamburger-menu{
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-}
-
 .navigation-header{
-    margin-left: 1rem;
-    
+    margin-left: 1rem;  
 }
 
 .navigation-list{
@@ -104,11 +80,6 @@ li {
 
 .navigation-list-items{
     list-style-type: none;
-}
-
-.download-img {
-    height: 150px;
-    width: 150px;
 }
 
 .header-text-container{
