@@ -82,11 +82,6 @@ li {
     list-style-type: none;
 }
 
-.download-img {
-    height: 150px;
-    width: 150px;
-}
-
 .header-text-container{
     width: 90vw;
     height: 45vh;
