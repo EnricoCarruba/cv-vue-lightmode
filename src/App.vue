@@ -1,4 +1,5 @@
 <template>
+ 
   <new-header/>
   <current-stack/>
   <my-portfolio/>
@@ -14,6 +15,8 @@ import myEducation from "./components/myEducation.vue"
 import CvData from "./components/cvData.vue";
 
 
+
+
 export default {
   name: 'App',
   components: {
@@ -21,7 +24,9 @@ export default {
     currentStack,
     myPortfolio,
     myEducation,
-    CvData
+    CvData,
+    
+
 }
 }
 </script>
@@ -34,21 +39,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
-/* button {
-  height: 3rem;
-  padding: 0.2rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(-45deg, #9925ea, #338aff, #9925ea);
-  background-size: 400%;
-  background-position: 90% 0;
-  color: #ffffff;
-  transition: background 0.8s;
-}
-
-button:hover {
-  background-position: 185% 50%;
-} */
 
 button {
   height: 5vh;
